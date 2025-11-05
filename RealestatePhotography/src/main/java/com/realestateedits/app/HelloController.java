@@ -14,6 +14,7 @@ public class HelloController
 	{
 		model.addAttribute("message", "Hello Spring MVC Framework!");
 		// return home
+		//sample
 		return "home";
 	}
 }
