@@ -24,14 +24,11 @@
                 <img src="<c:url value='/assets/images/logo.jpg'/>" alt="Logo">
             </div>
             <div class="nav-links">
-                <a href="#" class="active">Home</a>
-                <a href="#">Services</a>
-                <a href="#">Pricing</a>
-                <a href="#">Portfolio</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-                <a href="#" class="btn btn-login">Login</a>
-                <a href="#" class="btn btn-signup">Sign Up</a>
+                    <a href="<c:url value='/'/>" class="active">Home</a>
+					<a href="<c:url value='/service'/>">Services</a>
+                    <a href="<c:url value='/portfolio'/>">Our Galary</a>
+                    <a href="<c:url value='/about'/>">About</a>
+                    <a href="<c:url value='/contact'/>">Contact</a>
             </div>
         </nav>
     </header>

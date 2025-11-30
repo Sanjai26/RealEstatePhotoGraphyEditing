@@ -1,5 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 
 <!-- Include Header -->
 <jsp:include page="common/header.jsp" />
@@ -66,11 +68,7 @@
     margin: 0.25rem 0 0.4rem;
     color: #0b1220;
 }
-.service-card p{
-    color: #475569;
-    font-size: 0.95rem;
-    flex: 1 1 auto;
-}
+
 .service-card .learn-more{
     display: inline-block;
     margin-top: 0.6rem;
@@ -198,7 +196,7 @@
 /* Carousel title font (elegant, professional) */
 #heroCarousel .carousel-caption h1,
 #heroCarousel .carousel-caption .display-4 {
-  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  font-family: Josefin Sans, sans-serif;
   font-weight: 700;
   letter-spacing: -0.6px;
   font-size: clamp(1.6rem, 3.8vw, 3.6rem);
@@ -206,7 +204,7 @@
 }
 body 
 {
-  font-family: Arial, sans-serif;
+  font-family: Josefin Sans, sans-serif;
   background-color: #fff;
   color: #555;
   margin: 0;
@@ -218,7 +216,8 @@ body
     flex-wrap: wrap;
     text-align: center;
     gap: 30px;
-    margin-top: 10px;
+    background: #e67e220f;
+    margin-top: 3px;
 }
 
 .feature {
@@ -234,7 +233,7 @@ body
 }
 
 .feature h3 {
-  color: #e30613;
+  color: #e67e22;
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
@@ -263,15 +262,15 @@ body
 }
 .testimonials-section {
     background-color: #eae8e8;
-    padding: 60px 20px;
-    font-family: "Poppins", Arial, sans-serif;
+    padding: 30px 20px;
+    font-family: Josefin Sans, sans-serif;
 }
 
 .testimonials-section h2 {
+  width: 100%;
   text-align: center;
   color: black;
-  margin-bottom: 40px;
-  font-size: 28px;
+  font-size: 40px;
 }
 
 .testimonials-container {
@@ -327,6 +326,155 @@ body
   color: #555;
   line-height: 1.6;
 }
+p.hero-subtitle {
+    font-weight: 400;
+    font-size: 21px;
+}
+
+.re-editing-section {
+    padding: 20px 20px;
+    background: #f9f9f9;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.re-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.re-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+.re-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.re-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.re-card h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #e67e22;
+}
+
+.re-card p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.upload-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 40px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.upload-box, .upload-form {
+    flex: 1;
+}
+
+.upload-box h3, .upload-form h3 {
+	color: black;
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.upload-box p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.drop-area {
+    height: 220px;
+    border: 2px dashed #999;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #777;
+    cursor: pointer;
+}
+
+.drop-area:hover {
+    border-color: #000;
+}
+
+.drop-area input {
+    display: none;
+}
+
+/* FORM STYLING */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 0px;
+    height: 65px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+
+.submit-btn {
+    background: #e47717;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background:#e4771773;
+    color: #000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .upload-container {
+        flex-direction: column;
+    }
+}
+
 
 </style>
 
@@ -411,12 +559,84 @@ body
     <p>Our customer service experts are available 24/7 via live chat, phone, or email.</p>
   </div>
 </section>
-<jsp:include page="services-list.jsp" />
+<section class="re-editing-section">
+    <div class="re-container">
+    <h1 class="re-main-title fetures-title">How Ajai studio works:</h1>
+        <h2 class="re-title">
+            The only real estate photo editing company you need for 
+            photo outsourcing, video processing, and virtual staging.
+        </h2>
+        <div class="re-grid">
+            <!-- UPLOAD -->
+            <div class="re-card">
+                <h3>Upload photos or videos of your property</h3>
+                <p>Simply drag and drop your photos to submit a project in seconds. 
+                We accept every photo from iPhones to DSLRs.</p>
+            </div>
+            <!-- EDITORS -->
+            <div class="re-card">
+                <h3>Real estate editors go to work</h3>
+                <p>Every project you send will be assigned to an expert editor. 
+                We enhance your HDR photos using the latest processing and retouching techniques.</p>
+            </div>
+            <!-- TESTIMONIAL -->
+            <div class="re-card">
+                <h3>High-quality work every time</h3>
+                <p>“I chose this service for my real estate photo editing and the images I received were absolutely wonderful.”</p>
+            </div>
+            <!-- DELIVERY -->
+            <div class="re-card">
+                <h3>Receive high-quality photos the same day</h3>
+                <p>Expect quality, consistency, and 99.98% on-time delivery. 
+                We process all real estate photography types and deliver final images in high-resolution print and MLS formats.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="upload-container">
+
+    <!-- LEFT SIDE: DRAG & DROP -->
+    <div class="upload-box">
+        <h3>Upload Files</h3>
+        <p>Drag & drop your photos here or click to browse</p>
+        
+        <div class="drop-area" id="dropArea">
+            <p>Drop files here</p>
+            <input type="file" id="fileInput" multiple>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE: FORM -->
+    <div class="upload-form">
+        <h3>Get Your Free Trial</h3>
+
+        <form action="#" method="post">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" name="fullName" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email ID</label>
+                <input type="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Description</label>
+                <textarea name="description" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+</section>
+
 <section class="testimonials-section">
   <h2 class="align-center">What Our Clients Say</h2>
   <div class="testimonials-container">
     <div class="testimonial-card">
-      <img src="${pageContext.request.contextPath}/assets/images/profile1.jpg" alt="Client 1" class="profile-pic">
+      <img src="${pageContext.request.contextPath}/assets/images/testimonial-1.jpg" alt="Client 1" class="profile-pic">
       <h3>John Peterson</h3>
       <p class="role">Real Estate Agent, New York</p>
       <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -424,7 +644,7 @@ body
     </div>
 
     <div class="testimonial-card">
-      <img src="${pageContext.request.contextPath}/assets/images/profile2.jpg" alt="Client 2" class="profile-pic">
+      <img src="${pageContext.request.contextPath}/assets/images/testimonial-4.jpg" alt="Client 2" class="profile-pic">
       <h3>Sophia Martinez</h3>
       <p class="role">Property Manager, Los Angeles</p>
       <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -432,7 +652,7 @@ body
     </div>
 
     <div class="testimonial-card">
-      <img src="${pageContext.request.contextPath}/assets/images/profile3.jpg" alt="Client 3" class="profile-pic">
+      <img src="${pageContext.request.contextPath}/assets/images/testimonial-3.jpg" alt="Client 3" class="profile-pic">
       <h3>Michael Lee</h3>
       <p class="role">Broker, Chicago</p>
       <div class="stars">⭐⭐⭐⭐</div>
@@ -440,7 +660,7 @@ body
     </div>
 
     <div class="testimonial-card">
-      <img src="${pageContext.request.contextPath}/assets/images/profile4.jpg" alt="Client 4" class="profile-pic">
+      <img src="${pageContext.request.contextPath}/assets/images/testimonial-2.jpg" alt="Client 4" class="profile-pic">
       <h3>Emily Johnson</h3>
       <p class="role">Photographer, Miami</p>
       <div class="stars">⭐⭐⭐⭐⭐</div>

@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <section id="services-list" class="services-section">
     <style>
+	    .font-weight
+	    {
+	    font-weight: 700;
+	    }
         .services-section {
             padding: 60px 0;
             background: #f8f9fa;
@@ -20,18 +24,6 @@
             position: relative;
             height: 300px;
             overflow: hidden;
-        }
-        .service-card h3 {
-            color: #333;
-            font-size: 1.5rem;
-            margin: 20px 0;
-            padding: 0 20px;
-        }
-        .service-card p {
-            color: #666;
-            font-size: 1rem;
-            line-height: 1.6;
-            padding: 0 20px 20px;
         }
         .image-slider {
             position: relative;
@@ -76,7 +68,7 @@
     </style>
 
     <div class="container">
-        <h2 class="text-center mb-5">Our Photo Editing Services</h2>
+        <h2 class="text-center mb-5 font-weight">Our Photo Editing Services</h2>
         <div class="row">
             <!-- Image Enhancement -->
             <div class="col-lg-6 mb-4">
