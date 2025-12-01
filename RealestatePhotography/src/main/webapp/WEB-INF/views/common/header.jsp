@@ -27,7 +27,7 @@
                     <a href="<c:url value='/'/>" class="active">Home</a>
 					<a href="<c:url value='/service'/>">Services</a>
                     <a href="<c:url value='/portfolio'/>">Our Galary</a>
-                    <a href="<c:url value='/about'/>">About</a>
+                    <a href="<c:url value='/aboutUs'/>">About</a>
                     <a href="<c:url value='/contact'/>">Contact</a>
             </div>
         </nav>

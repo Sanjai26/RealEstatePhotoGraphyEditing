@@ -28,5 +28,15 @@
 		<servlet-name>servicePage</servlet-name>
 		<url-pattern>/service</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>aboutUsPage</servlet-name>
+		<jsp-file>/WEB-INF/views/aboutUs.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>aboutUsPage</servlet-name>
+		<url-pattern>/aboutUs</url-pattern>
+	</servlet-mapping>
 
 </web-app>
