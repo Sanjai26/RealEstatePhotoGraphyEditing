@@ -478,24 +478,24 @@ p.hero-subtitle {
 
 </style>
 
+
 <!-- HERO: clean, valid markup -->
-<section class="hero">
- <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+<section class="hero container-fluid px-0">
+  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
       <!-- Slide 1 -->
-      <div class="carousel-item active" 
-           style="background-image: url('${pageContext.request.contextPath}/assets/images/hero-img-1.jpg');">
-        <div class="carousel-caption">
+      <div class="carousel-item active" style="background-image: url('${pageContext.request.contextPath}/assets/images/hero-img-1.jpg');">
+        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center text-center">
           <div class="hero-badge">THE #1 FULL-SERVICE REAL ESTATE MARKETING AGENCY</div>
-          <h1 class="display-4 fw-bold mb-3">Edit your photos,</h1><h1> Conquer the market</h1>
+          <h1 class="display-4 fw-bold mb-3">Edit your photos,</h1>
+          <h1>Conquer the market</h1>
           <p class="hero-subtitle">Turn dull property photos into vibrant, high-converting visuals that make listings stand out on every platform. From color correction to sky replacement – we make your photos irresistible.</p>
           <div class="btn-service">View Our Services</div>
         </div>
       </div>
       <!-- Slide 2 -->
-      <div class="carousel-item" 
-           style="background-image: url('${pageContext.request.contextPath}/assets/images/hero-img-2.jpg');">
-        <div class="carousel-caption">
+      <div class="carousel-item" style="background-image: url('${pageContext.request.contextPath}/assets/images/hero-img-2.jpg');">
+        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center text-center">
           <div class="hero-badge">TRANSFORM EMPTY SPACES INTO DREAM HOMES</div>
           <h1 class="display-4 fw-bold mb-3">Interior Design & Virtual Staging</h1>
           <p class="hero-subtitle">Bring empty rooms to life with realistic virtual staging, object removal, and décor enhancements that help buyers visualize their future home before stepping inside.</p>
@@ -503,60 +503,64 @@ p.hero-subtitle {
         </div>
       </div>
       <!-- Slide 3 -->
-      <div class="carousel-item" 
-           style="background-image: url('${pageContext.request.contextPath}/assets/images/hero-img-3.jpg');">
-        <div class="carousel-caption">
+      <div class="carousel-item" style="background-image: url('${pageContext.request.contextPath}/assets/images/hero-img-3.jpg');">
+        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center text-center">
           <div class="hero-badge">CAPTIVATING AERIAL & TWILIGHT PHOTOGRAPHY</div>
           <h1 class="display-4 fw-bold mb-3">Drone Edits & Day-to-Dusk Magic</h1>
           <p class="hero-subtitle">Highlight property beauty with breathtaking drone enhancements, perfect twilight skies, and lighting adjustments that add emotion and elegance to every shot.</p>
           <div class="btn-service">Get a Free Quote</div>
         </div>
       </div>
+    </div>
+  </div>
 </section>
 
-<section class="features-container">
-<h2 class="fetures-title">Why We’re Your Best Choice</h2>
-  <div class="feature">
-    <img src="${pageContext.request.contextPath}/assets/images/stopwatch_4109118.png" 
-         alt="Fast and Quality Editing Icon">
-    <h3>Fast & Quality Editing</h3>
-    <p>Experience quick 24-hour turnaround with top-quality professional edits 
-       (48 hours for virtual staging).</p>
-  </div>
 
-  <div class="feature">
-    <img src="${pageContext.request.contextPath}/assets/images/subscription-inactive.png" 
-         alt="No Subscriptions Icon">
-    <h3>No Subscriptions</h3>
-    <p>Pay only for what you use with no subscriptions — just one fixed low rate per image.</p>
-  </div>
-
-  <div class="feature">
-    <img src="${pageContext.request.contextPath}/assets/images/change.png" 
-         alt="Unlimited Changes Icon">
-    <h3>Unlimited Changes</h3>
-    <p>Enjoy 100% satisfaction with our unlimited change guarantee.</p>
-  </div>
-  
-  <div class="feature">
-    <img src="${pageContext.request.contextPath}/assets/images/free-trial_5579376.png" 
-         alt="Free Trial Icon">
-    <h3>Free Trial</h3>
-    <p>Receive3 image enhancements and 1 day to dusk edit when you sign up.</p>
-  </div>
-
-  <div class="feature">
-    <img src="${pageContext.request.contextPath}/assets/images/documents.png" 
-         alt="No Copyright Icon">
-    <h3>No Copyright</h3>
-    <p>We edit your images and return them to you — no ownership taken.</p>
-  </div>
-
-  <div class="feature">
-    <img src="${pageContext.request.contextPath}/assets/images/24-7.png" 
-         alt="Real Service Icon">
-    <h3>Real Service</h3>
-    <p>Our customer service experts are available 24/7 via live chat, phone, or email.</p>
+<section class="features-container container py-4">
+  <h2 class="fetures-title">Why We’re Your Best Choice</h2>
+  <div class="row justify-content-center g-4">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-2 d-flex">
+      <div class="feature w-100">
+        <img src="${pageContext.request.contextPath}/assets/images/stopwatch_4109118.png" alt="Fast and Quality Editing Icon">
+        <h3>Fast & Quality Editing</h3>
+        <p>Experience quick 24-hour turnaround with top-quality professional edits (48 hours for virtual staging).</p>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-2 d-flex">
+      <div class="feature w-100">
+        <img src="${pageContext.request.contextPath}/assets/images/subscription-inactive.png" alt="No Subscriptions Icon">
+        <h3>No Subscriptions</h3>
+        <p>Pay only for what you use with no subscriptions — just one fixed low rate per image.</p>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-2 d-flex">
+      <div class="feature w-100">
+        <img src="${pageContext.request.contextPath}/assets/images/change.png" alt="Unlimited Changes Icon">
+        <h3>Unlimited Changes</h3>
+        <p>Enjoy 100% satisfaction with our unlimited change guarantee.</p>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-2 d-flex">
+      <div class="feature w-100">
+        <img src="${pageContext.request.contextPath}/assets/images/free-trial_5579376.png" alt="Free Trial Icon">
+        <h3>Free Trial</h3>
+        <p>Receive 3 image enhancements and 1 day to dusk edit when you sign up.</p>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-2 d-flex">
+      <div class="feature w-100">
+        <img src="${pageContext.request.contextPath}/assets/images/documents.png" alt="No Copyright Icon">
+        <h3>No Copyright</h3>
+        <p>We edit your images and return them to you — no ownership taken.</p>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-2 d-flex">
+      <div class="feature w-100">
+        <img src="${pageContext.request.contextPath}/assets/images/24-7.png" alt="Real Service Icon">
+        <h3>Real Service</h3>
+        <p>Our customer service experts are available 24/7 via live chat, phone, or email.</p>
+      </div>
+    </div>
   </div>
 </section>
 <section class="re-editing-section">

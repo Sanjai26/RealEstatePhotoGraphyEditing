@@ -85,7 +85,7 @@ body {
 	-webkit-backdrop-filter: var(--glass-blur);
 	border: 1px solid rgba(255, 255, 255, 0.05);
 	border-radius: 16px;
-	padding: 0.75rem 2rem !important;
+	padding: 0px 2rem !important;
 	transition: all 0.4s ease;
 	margin: 0 5%;
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -105,84 +105,96 @@ body {
 .logo:hover img {
 	transform: scale(1.05);
 }
-
-.nav-links {
-	display: flex;
-	gap: 2.5rem;
-	align-items: center;
-	margin-left: auto;
+/* Align nav items */
+.navbar-nav {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    margin-left: auto;
 }
 
-.nav-links a {
-	text-decoration: none;
-	color: rgba(255, 255, 255, 0.9);
-	font-weight: 500;
-	font-size: 0.95rem;
-	letter-spacing: 0.3px;
-	padding: 0.5rem 0;
-	position: relative;
-	transition: all 0.3s ease;
+/* Base link styles */
+.navbar-nav .nav-link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: all 0.3s ease;
 }
 
-.nav-links a:not(.btn-login):not(.btn-signup) {
-	position: relative;
-	padding: 0.4rem 0;
+/* Underline animation */
+.navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #e67e22;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    opacity: 0;
 }
 
-.nav-links a:not(.btn-login):not(.btn-signup)::before {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	width: 0;
-	height: 2px;
-	background: linear-gradient(to right, #e67e22, #e67e22);
-	transition: all 0.3s ease;
-	transform: translateX(-50%);
-	opacity: 0;
+/* Hover effect */
+.navbar-nav .nav-link:hover {
+    color: #fff !important;
+    transform: translateY(-1px);
 }
 
-.nav-links a:not(.btn-login):not(.btn-signup):hover {
-	color: #fff;
-	transform: translateY(-1px);
+.navbar-nav .nav-link:hover::before {
+    width: 100%;
+    opacity: 1;
 }
 
-.nav-links a:not(.btn-login):not(.btn-signup):hover::before {
-	width: 100%;
-	opacity: 1;
+/* Active page highlight */
+.navbar-nav .nav-link.active {
+    color: #fff !important;
+    font-weight: 600;
 }
 
-.nav-links .nav-links{
-	padding: 0.6rem 1.8rem;
-	border-radius: 50px;
-	font-weight: 600;
-	letter-spacing: 0.5px;
-	transition: all 0.3s ease;
+.navbar-nav .nav-link.active::before {
+    width: 100%;
+    opacity: 1;
 }
 
-.nav-links .btn-login {
-	background: rgba(255, 255, 255, 0.1);
-	border: 1px solid rgba(255, 255, 255, 0.2);
-	margin-left: 1rem;
+/* Buttons (login / signup) – if you add them later */
+.navbar-nav .btn-login {
+    padding: 0.6rem 1.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    margin-left: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
 }
 
-.nav-links .btn-signup {
-	background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
-	border: none;
-	box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+.navbar-nav .btn-signup {
+    padding: 0.6rem 1.8rem;
+    background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
 }
 
-.nav-links .btn-login:hover {
-	background: rgba(255, 255, 255, 0.15);
-	border-color: rgba(255, 255, 255, 0.3);
-	transform: translateY(-2px);
-	box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+.navbar-nav .btn-login:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
 }
 
-.nav-links .btn-signup:hover {
-	background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
-	transform: translateY(-2px);
-	box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
+.navbar-nav .btn-signup:hover {
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
 }
 
 .hero {

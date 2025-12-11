@@ -49,79 +49,6 @@ body {
     letter-spacing: 1px;
 }
 
-@media (max-width: 768px) {
-    .about-section {
-        padding-left: 30px;
-        height: auto;
-        padding-top: 80px;
-        padding-bottom: 80px;
-    }
-    .content p {
-        font-size: 18px;
-    }
-}
-
-.profile-section {
-    position: relative;
-    width: 100%;
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    padding-left: 120px;
-    color: white;
-}
-.profile-section {
-    display: flex;
-    align-items: stretch;
-    min-height: 350px;
-    border-radius: 12px;
-    overflow: hidden;
-    margin: 25px 10px 25px 10px;
-}
-
-.profile-image {
-    flex: 1.1;
-}
-
-.profile-content {
-    flex: 1.5;
-    background: #f7f7f7;
-    color: #222;
-    padding: 40px 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.profile-content h3 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 18px;
-}
-
-.profile-content p {
-    font-size: 1.15rem;
-    line-height: 1.7;
-    color: #444;
-}
-
-.profile-content .highlight {
-    margin-top: 10px;
-    font-size: 1rem;
-    color: #ffae00;
-    font-weight: 600;
-}
-
-/* Responsive */
-@media(max-width: 768px) {
-    .profile-section {
-        flex-direction: column;
-    }
-
-    .profile-image {
-        height: 250px;
-    }
-}
 /* Tools Section */
 .tools-section {
     margin-top: 40px;
@@ -142,11 +69,113 @@ body {
     height: auto;
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
 }
-.tools-scroll
-{
-	display: flex;
-    gap: 184px;
+.tools-section {
+    padding: 20px;
+    text-align: center;
 }
+
+.tools-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.tools-scroll {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.scroll-content {
+    display: flex;
+    gap: 30px;
+    animation: scroll 20s linear infinite;
+}
+
+.tool-card img {
+    width: 80px;
+    height: auto;
+}
+
+/* Hover effect */
+.tool-card:hover {
+    transform: scale(1.15);
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.3);
+}
+
+/* Keyframes for seamless infinite scroll */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* MAIN CONTAINER */
+.profile-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 35px;
+    padding: 40px;                      
+    min-height: 260px;    
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    margin: 20px 0;
+}
+
+.profile-image {
+    width: 600px;                    
+    height: 300px;
+}
+
+
+/* CONTENT STYLING */
+.profile-content {
+    max-width: 810px;
+}
+
+.profile-content h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #222;
+}
+
+.profile-content p {
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* Highlight Text */
+.highlight {
+    font-size: 19px !important;
+    font-weight: 700;
+    color: #ff9a00 !important;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+        min-height: auto;
+    }
+
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
 
 
 </style>
@@ -168,8 +197,10 @@ body {
     </div>
 </div>
 <div class="profile-section">
-    <div class="profile-image" style="background: url('${pageContext.request.contextPath}/assets/images/Adobe Certified.jpg') no-repeat center center/cover;"></div>
-    
+	<div>
+		<img class="profile-image" src="${pageContext.request.contextPath}/assets/images/Adobe-Certified.jpg"
+		     alt="Profile Image">
+     </div>
     <div class="profile-content">
         <h3>Certified Professional</h3>
         <p>
@@ -180,33 +211,39 @@ body {
 </div>
 <div class="tools-section">
     <h3 class="tools-title">Tools We Use</h3>
-	    <div class="tools-scroll">
-	        <div class="tool-card">
-	            <img src="${pageContext.request.contextPath}/assets/images/photoshop.png" alt="Adobe Photoshop">
-	        </div>
-	
-	        <div class="tool-card">
-	            <img src="${pageContext.request.contextPath}/assets/images/photoshop-lightroom.png" alt="Adobe Lightroom">
-	        </div>
-	
-	        <div class="tool-card">
-	            <img src="${pageContext.request.contextPath}/assets/images/premiere-pro.png" alt="Premiere Pro">
-	        </div>
-	
-	        <div class="tool-card">
-	            <img src="${pageContext.request.contextPath}/assets/images/after-effects.png" alt="After Effects">
-	        </div>
-	
-	        <div class="tool-card">
-	            <img src="${pageContext.request.contextPath}/assets/images/gimp.png" alt="GIMP">
-	        </div>
-	
-	        <div class="tool-card">
-	            <img src="${pageContext.request.contextPath}/assets/images/illustrator.png" alt="Illustrator">
-	        </div>
-	    </div>
-	</div>
+
+    <div class="tools-scroll">
+        <div class="scroll-content">
+            <!-- First set -->
+            <div class="tool-card"><img src="${pageContext.request.contextPath}/assets/images/photoshop.png" alt="Adobe Photoshop"></div>
+            <div class="tool-card"><img src="${pageContext.request.contextPath}/assets/images/photoshop-lightroom.png" alt="Adobe Lightroom"></div>
+            <div class="tool-card"><img src="${pageContext.request.contextPath}/assets/images/premiere-pro.png" alt="Premiere Pro"></div>
+            <div class="tool-card"><img src="${pageContext.request.contextPath}/assets/images/after-effects.png" alt="After Effects"></div>
+            <div class="tool-card"><img src="${pageContext.request.contextPath}/assets/images/gimp.png" alt="GIMP"></div>
+            <div class="tool-card"><img src="${pageContext.request.contextPath}/assets/images/illustrator.png" alt="Illustrator"></div>
+            <div class="tool-card"><img src="${pageContext.request.contextPath}/assets/images/adobe-bridge.png" alt="Bridge"></div>
+
+            <!-- Duplicate set for infinite scroll -->
+            <div class="tool-card"><img src="${pageContext.request.contextPath}/assets/images/photoshop.png" alt="Adobe Photoshop"></div>
+            <div class="tool-card"><img src="${pageContext.request.contextPath}/assets/images/photoshop-lightroom.png" alt="Adobe Lightroom"></div>
+            <div class="tool-card"><img src="${pageContext.request.contextPath}/assets/images/premiere-pro.png" alt="Premiere Pro"></div>
+            <div class="tool-card"><img src="${pageContext.request.contextPath}/assets/images/after-effects.png" alt="After Effects"></div>
+            <div class="tool-card"><img src="${pageContext.request.contextPath}/assets/images/gimp.png" alt="GIMP"></div>
+            <div class="tool-card"><img src="${pageContext.request.contextPath}/assets/images/illustrator.png" alt="Illustrator"></div>
+            <div class="tool-card"><img src="${pageContext.request.contextPath}/assets/images/adobe-bridge.png" alt="Bridge"></div>
+            
+             <!-- Duplicate set for infinite scroll -->
+            <div class="tool-card"><img src="${pageContext.request.contextPath}/assets/images/photoshop.png" alt="Adobe Photoshop"></div>
+            <div class="tool-card"><img src="${pageContext.request.contextPath}/assets/images/photoshop-lightroom.png" alt="Adobe Lightroom"></div>
+            <div class="tool-card"><img src="${pageContext.request.contextPath}/assets/images/premiere-pro.png" alt="Premiere Pro"></div>
+            <div class="tool-card"><img src="${pageContext.request.contextPath}/assets/images/after-effects.png" alt="After Effects"></div>
+            <div class="tool-card"><img src="${pageContext.request.contextPath}/assets/images/gimp.png" alt="GIMP"></div>
+            <div class="tool-card"><img src="${pageContext.request.contextPath}/assets/images/illustrator.png" alt="Illustrator"></div>
+            <div class="tool-card"><img src="${pageContext.request.contextPath}/assets/images/adobe-bridge.png" alt="Bridge"></div>
+        </div>
+    </div>
 </div>
+
 
 <jsp:include page="/WEB-INF/views/common/footer.jsp" />
 </body>
